@@ -1,0 +1,36 @@
+<%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/product-list.css">
+    </head>
+
+    <body>
+        <%- include('../includes/navigation.ejs') %>
+            <main>
+                <section class="shopBody">
+                    <% if(prods.length>0) { %>
+                        <% for(let Product of prods) {%>
+                            <article class="card">
+                                <h1>
+                                    <%= Product.title %>
+                                </h1>
+                                <img src="/<%= Product.imageUrl %>" alt="<%= Product.title %>">
+                                <h3>$<%= Product.price %>
+                                </h3>
+                                <p>Dis: <%= Product.description %>
+                                </p>
+                                <div class="form_action">
+                                    <a class="btn" href="/admin/edit-product/<%=Product._id%>?edit=true">Edit</a>
+
+                                    <input type="hidden" value="<%= Product._id %>" name="productId">
+                                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                    <button class="btn" type="button" onclick="deleteProduct(this)">Delete</button>
+
+                                </div>
+                            </article>
+                            <%}%>
+                                <% } else { %>
+                                    <h1>No Products found</h1>
+                                    <% }%>
+                </section>
+            </main>
+            <%- include('../includes/end.ejs') %>
+                <script src="/js/admin.js"></script>

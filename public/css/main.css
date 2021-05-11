@@ -1,0 +1,57 @@
+main{
+    background-image: url(./ben-white-qDY9ahp0Mto-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 94.2vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.shopBody h1{
+    background-color: white;
+    color: black;
+    margin: auto;
+    border-radius: 20px;
+    padding: 20px;
+}
+.form{
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.445);
+    border-radius: 20px;
+    height: auto;
+    width: auto;
+}
+.formControl{
+    margin: 10px;
+    padding: 5px;
+    width: auto;
+}
+.formControl input,
+.formControl>textarea{
+    float:right;
+    margin-left: 10px;
+}
+#image{
+    width: 180px;
+}
+#btn{
+    width: 250px;
+    margin: 10px;
+    border-radius: 5px;
+    line-height: 1.5rem;
+}
+.error{
+    color: red;
+    background-color: rgba(255, 0, 0, 0.308);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.formControl input.invalid,
+.formControl textarea.invalid{
+    border-color: red;
+}

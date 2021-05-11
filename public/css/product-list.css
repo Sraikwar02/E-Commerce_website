@@ -1,0 +1,60 @@
+main{
+    background-image: url(./ben-white-qDY9ahp0Mto-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+
+}
+.shopBody{
+    min-height: 95vh;
+    /* width: 900px; */
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(4,350px);
+    
+}
+.card{
+    height: 250px;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.445);
+    margin: 10px;
+    
+}
+.card>h1,
+.card>h3,
+.card>p{
+    margin: 5px 20px;
+}
+.card>img{
+    height: 100px;
+    width: 100%;
+}
+.form_action{
+    display: flex;
+}
+
+
+
+.pagination{
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+    margin-top: -50px;
+    width: 100%;
+}
+
+.pagination a{
+    border: 2px solid rgb(119, 216, 99);
+    padding: 0.5rem;
+    text-decoration: none;
+    color: white;
+    margin: 5px;
+}
+
+.pagination a:hover,
+.pagination a:active
+.pagination a.active{
+    background-color: rgb(119, 216, 99);
+    color: red;
+}
